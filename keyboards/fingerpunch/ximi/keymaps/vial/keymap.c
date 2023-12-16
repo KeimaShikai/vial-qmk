@@ -142,36 +142,38 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 };
 
+#if defined(RGB_MATRIX_ENABLE)
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    // switch(get_highest_layer(layer_state|default_layer_state)) {
-    //     case 3:
-    //         rgb_matrix_set_color_all(RGB_WHITE);
-    //         break;
-    //     case 2:
-    //         rgb_matrix_set_color_all(RGB_BLUE);
-    //         break;
-    //     case 1:
-    //         rgb_matrix_set_color_all(RGB_RED);
-    //         break;
-    //     default:
-    //         rgb_matrix_set_color_all(RGB_GOLD);
-    //         break;
-    // }
-    for (uint8_t i = led_min; i < led_max; i++) {
-        switch(get_highest_layer(layer_state|default_layer_state)) {
-            case 3:
-                rgb_matrix_set_color(i, RGB_WHITE);
-                break;
-            case 2:
-                rgb_matrix_set_color(i, RGB_BLUE);
-                break;
-            case 1:
-                rgb_matrix_set_color(i, RGB_RED);
-                break;
-            default:
-                rgb_matrix_set_color(i, RGB_GOLD);
-                break;
-        }
+    switch(get_highest_layer(layer_state|default_layer_state)) {
+        case 3:
+            rgb_matrix_set_color_all(RGB_WHITE);
+            break;
+        case 2:
+            rgb_matrix_set_color_all(RGB_BLUE);
+            break;
+        case 1:
+            rgb_matrix_set_color_all(RGB_RED);
+            break;
+        default:
+            rgb_matrix_set_color_all(RGB_GOLD);
+            break;
     }
+    // for (uint8_t i = led_min; i < led_max; i++) {
+    //     switch(get_highest_layer(layer_state|default_layer_state)) {
+    //         case 3:
+    //             rgb_matrix_set_color(i, RGB_WHITE);
+    //             break;
+    //         case 2:
+    //             rgb_matrix_set_color(i, RGB_BLUE);
+    //             break;
+    //         case 1:
+    //             rgb_matrix_set_color(i, RGB_RED);
+    //             break;
+    //         default:
+    //             rgb_matrix_set_color(i, RGB_GOLD);
+    //             break;
+    //     }
+    // }
     return false;
 }
+#endif
