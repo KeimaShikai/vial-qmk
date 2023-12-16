@@ -234,6 +234,7 @@
 #ifndef MEGALOVANIA
 #    define MEGALOVANIA
 #endif
+// #define MEGALOVANIA E__NOTE(_D4), E__NOTE(_D4), E__NOTE(_D5), E__NOTE(_A4), E__NOTE(_AB4), E__NOTE(_G4), E__NOTE(_F4), E__NOTE(_D4), E__NOTE(_F4), E__NOTE(_G4),
 #ifndef MICHISHIRUBE
 #    define MICHISHIRUBE
 #endif
