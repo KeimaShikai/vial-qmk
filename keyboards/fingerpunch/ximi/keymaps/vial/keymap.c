@@ -160,16 +160,16 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     for (uint8_t i = led_min; i < led_max; i++) {
         switch(get_highest_layer(layer_state|default_layer_state)) {
             case 3:
-                rgb_matrix_set_color_all(i, RGB_WHITE);
+                rgb_matrix_set_color(i, RGB_WHITE);
                 break;
             case 2:
-                rgb_matrix_set_color_all(i, RGB_BLUE);
+                rgb_matrix_set_color(i, RGB_BLUE);
                 break;
             case 1:
-                rgb_matrix_set_color_all(i, RGB_RED);
+                rgb_matrix_set_color(i, RGB_RED);
                 break;
             default:
-                rgb_matrix_set_color_all(i, RGB_GOLD);
+                rgb_matrix_set_color(i, RGB_GOLD);
                 break;
         }
     }
