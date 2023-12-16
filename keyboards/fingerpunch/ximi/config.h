@@ -136,12 +136,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define FP_AUDIO_SAVE
     #define FP_STARTUP_FLOW_DOWN WHOLE_NOTE(_E6), HALF_NOTE(_REST), HALF_NOTE(_C6), WHOLE_NOTE(_G5), HALF_NOTE(_A5), WHOLE_NOTE(_D5), WHOLE_NOTE(_E5), WHOLE_NOTE(_C5),
     #define STARTUP_SONG SONG(FP_STARTUP_FLOW_DOWN)
-    // #define DEFAULT_LAYER_SONGS \
-    //     { SONG(MEGALOVANIA) }
+    // #define DEFAULT_LAYER_SONGS { SONG(MEGALOVANIA) }
     #define DEFAULT_LAYER_SONGS \
         { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND) }
 #endif
-
+    
 #ifdef HAPTIC_ENABLE
     #define FB_ERM_LRA 1
     #define FB_BRAKEFACTOR 3 // For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7
