@@ -142,6 +142,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 
+#if defined(RGB_MATRIX_ENABLE)
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     for (uint8_t i = 0; i < 35; i++) {
         switch(get_highest_layer(layer_state|default_layer_state)) {
@@ -163,3 +164,4 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     }
     return false;
 }
+#endif
