@@ -144,7 +144,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 #if defined(RGB_MATRIX_ENABLE)
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    for (uint8_t i = 0; i < 35; i++) {
+    for (uint8_t i = led_min; i <= led_max; i++) {
         switch(get_highest_layer(layer_state|default_layer_state)) {
             case 3:
                 rgb_matrix_set_color(i, RGB_WHITE);
